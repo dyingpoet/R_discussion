@@ -1,0 +1,120 @@
+title: R Discussion
+subtitle: Jun Li
+
+
+h1. R you ready?
+
+h3. Flexbile
+
+h3. Useful Packages
+
+h3. 64-bit 
+
+h3. Cloud computing
+
+h1. Command Line Options
+
+h3. R --vanilla
+
+* --no-save, --no-restore
+
+h3. Rscript
+
+h3. R --slave
+
+h3. R CMD BATCH
+
+* default: save, restore
+
+h3. commandArgs() 
+
+h1. Efficiency
+
+h3. "<-" versus "="
+
+h3. Use the optimized built-in functions
+
+* .primitive(), .C(), .Call()
+
+h3. Avoid using rbind() in the loop
+
+h3. Profiling
+
+* Rprof "profr"
+
+* Rprofmem
+
+h1. Interface to c/cpp/python
+
+h3. Compile .C() Function
+* R CMD SHLIB
+* header file "R.h"
+* both inputs and ouput are passed by pointers
+
+h3. "Rcpp" and "inline"
+* cfunction
+* cxxfunction
+
+h3. Interface to Python
+
+* "RPy2"
+
+h1. Interface to SAS/Excel/SQL
+
+h3. "sas7bdat"
+
+* read.sas7bdat("filename.sas7bdat")
+
+h3. "xlsReadWrite"
+
+* read.xls
+* write.xls
+
+h3. RExcel
+
+h3. Interface to Databases
+
+* "RMySQL"
+
+* "RSQLite"
+
+* "RPostgreSQL"
+
+
+h1. Graphics Modules
+
+h3. "grahpics"
+
+h3. "lattice"
+
+h3. "ggplot"
+
+h3. "googlevis"
+
+h3. "animation"
+
+h3. "manipulate" in RStudio
+
+
+h1. Modeling
+
+h3. "rpart" R version of CART
+
+h3. "randomForest"
+
+h3. "e1071" R version of libsvm
+
+h3. "glmnet" Elastic Net
+
+h3. "gbm" Gradient Boosting
+
+h3. "nnet" Neural Network
+
+h3. "RWeka"
+
+h3. "rattle"
+
+
+
+
+

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2011 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Chrome DevRel Team (chrome-devrel@googlegroups.com)
+                 Alex Russell (slightlyoff@chromium.org)
+                 Brad Neuberg
+-->
+
+<!-- GB: modifications for s9 template pack:
+ 
+  o removed offline manifest
+  o removed disclaimer; it's just a prototype anyway
+  o removed google analytics script code
+  o removed google maps script code
+  o removed all slides
+
+  o in js/utils.js changed line 541pp queryAll('.transitionSlide')
+ 
+     - looks for h1 (not h2) and doesn't include img (icon)
+
+  o in styles/commons.css commented out rules for li and bullets
+ 
+   li {
+    list-style: none;
+    padding: 10px 0;
+   }
+   .bullets {
+  font-size: 40px;
+  }
+  .bullets li::before {
+    content: '· ';
+  }
+-->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <title>R Discussion</title>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono" rel="stylesheet" type="text/css" />
+    <link id="prettify-link" href="src/prettify/prettify.css" rel="stylesheet" disabled />
+    <link href="styles/fonts.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="styles/presentation.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="styles/common.css" rel="stylesheet" type="text/css" media="screen" />
+    <link class="theme" href="styles/default.css" rel="stylesheet" type="text/css" media="screen" />
+    <link class="theme" href="styles/moon.css" rel="stylesheet" type="text/css" media="screen" />
+    <link class="theme" href="styles/sand.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link class="theme" href="styles/sea_wave.css" rel="stylesheet" type="text/css" media="screen"/>
+  </head>
+  <body>
+    <div id="flex-container">
+    <nav id="helpers">
+      <button title="Previous slide" id="nav-prev" class="nav-prev">&#8701;</button> 
+      <button title="Jump to a random slide" id="slide-no">5</button> 
+      <button title="Next slide" id="nav-next" class="nav-next">&#8702;</button>
+      <menu>
+        <button type="checkbox" data-command="toc" title="Table of Contents" class="toc">TOC</button>
+        <!-- <button type="checkbox" data-command="resources" title="View Related Resources">&#9734;</button> -->
+        <button type="checkbox" data-command="notes" title="View Slide Notes">&#9999;</button>
+        <button type="checkbox" data-command="source" title="View slide source">&#8635;</button>
+        <button type="checkbox" data-command="help" title="View Help">?</button>
+      </menu>
+    </nav>
+    <div class="slides">
+      <div id="presentation-counter">Loading...</div>
+        <div class="slide" id="landing-slide">
+          <section class="middle">
+            <p>This presentation is an HTML5 website</p>
+            <p>Press <span id="left-init-key" class="key">&rarr;</span> key to advance.</p>
+          </section>
+          <aside class="note">
+            <section>
+              Welcome! (This field is for speaker notes and commentary.)
+            </section>
+          </aside> 
+        </div>
+
+        <div class="slide" id="controls-slide">
+          <header>Slides controls</header>
+          <section>
+            <ul>
+              <li><span class="key">&larr;</span> and <span class="key">&rarr;</span> to move around.</li>
+              <li><span class="key">Ctrl/Command</span> and <span class="key">+</span> or <span class="key">-</span> to zoom in and out if slides don’t fit.</li>
+              <li><span class="key">S</span> to view page source.</li>
+              <li><span class="key">T</span> to change the theme.</li>
+              <li><span class="key">H</span> to toggle syntax highlight.</li>
+              <li><span class="key">N</span> to toggle speaker notes.</li>
+              <li><span class="key">3</span> to toggle 3D effect.</li>
+              <li><span class="key">0</span> to toggle help.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="slide" id="title-slide">
+          <section class="middle">
+            <hgroup>
+              <h1>
+                R Discussion
+              </h1>
+              <h2>
+                Jun Li
+              </h2>
+            </hgroup>
+          </section>
+        </div>
+
+        <div class="slide" id="table-of-contents">
+          <header><h1>Agenda - Table of Contents</h1></header>
+          <section>
+            <ul id="toc-list">
+            </ul>
+          </section>
+        </div>
+
+
+        
+        <div class="slide transitionSlide" id="slide2">
+          <header><h1>R you ready?</h1></header>
+          <section>
+              <h3>Flexbile</h3>
+<h3>Useful Packages</h3>
+<h3>64-bit</h3>
+<h3>Cloud computing</h3>
+
+
+          </section>
+        </div>
+        
+        <div class="slide transitionSlide" id="slide3">
+          <header><h1>Command Line Options</h1></header>
+          <section>
+              <h3>R &#8212;vanilla</h3>
+<ul>
+	<li>&#8212;no-save, &#8212;no-restore</li>
+</ul>
+<h3>Rscript</h3>
+<h3>R &#8212;slave</h3>
+<h3>R CMD BATCH</h3>
+<ul>
+	<li>default: save, restore</li>
+</ul>
+<h3>commandArgs()</h3>
+
+
+          </section>
+        </div>
+        
+        <div class="slide transitionSlide" id="slide4">
+          <header><h1>Efficiency</h1></header>
+          <section>
+              <h3>&#8220;&lt;-&#8221; versus &#8220;=&#8221;</h3>
+<h3>Use the optimized built-in functions</h3>
+<ul>
+	<li>.primitive(), .C(), .Call()</li>
+</ul>
+<h3>Avoid using rbind() in the loop</h3>
+<h3>Profiling</h3>
+<ul>
+	<li>Rprof &#8220;profr&#8221;</li>
+</ul>
+<ul>
+	<li>Rprofmem</li>
+</ul>
+
+
+          </section>
+        </div>
+        
+        <div class="slide transitionSlide" id="slide5">
+          <header><h1>Interface to c/cpp/python</h1></header>
+          <section>
+              <h3>Compile .C() Function</h3>
+<ul>
+	<li>R CMD SHLIB</li>
+	<li>header file &#8220;R.h&#8221;</li>
+	<li>both inputs and ouput are passed by pointers</li>
+</ul>
+<h3>&#8220;Rcpp&#8221; and &#8220;inline&#8221;</h3>
+<ul>
+	<li>cfunction</li>
+	<li>cxxfunction</li>
+</ul>
+<h3>Interface to Python</h3>
+<ul>
+	<li>&#8220;RPy2&#8221;</li>
+</ul>
+
+
+          </section>
+        </div>
+        
+        <div class="slide transitionSlide" id="slide6">
+          <header><h1>Interface to SAS/Excel/SQL</h1></header>
+          <section>
+              <h3>&#8220;sas7bdat&#8221;</h3>
+<ul>
+	<li>read.sas7bdat(&#8220;filename.sas7bdat&#8221;)</li>
+</ul>
+<h3>&#8220;xlsReadWrite&#8221;</h3>
+<ul>
+	<li>read.xls</li>
+	<li>write.xls</li>
+</ul>
+<h3>RExcel</h3>
+<h3>Interface to Databases</h3>
+<ul>
+	<li>&#8220;RMySQL&#8221;</li>
+</ul>
+<ul>
+	<li>&#8220;RSQLite&#8221;</li>
+</ul>
+<ul>
+	<li>&#8220;RPostgreSQL&#8221;</li>
+</ul>
+
+
+          </section>
+        </div>
+        
+        <div class="slide transitionSlide" id="slide7">
+          <header><h1>Graphics Modules</h1></header>
+          <section>
+              <h3>&#8220;grahpics&#8221;</h3>
+<h3>&#8220;lattice&#8221;</h3>
+<h3>&#8220;ggplot&#8221;</h3>
+<h3>&#8220;googlevis&#8221;</h3>
+<h3>&#8220;animation&#8221;</h3>
+<h3>&#8220;manipulate&#8221; in RStudio</h3>
+
+
+          </section>
+        </div>
+        
+        <div class="slide transitionSlide" id="slide8">
+          <header><h1>Modeling</h1></header>
+          <section>
+              <h3>&#8220;rpart&#8221; R version of CART</h3>
+<h3>&#8220;randomForest&#8221;</h3>
+<h3>&#8220;e1071&#8221; R version of libsvm</h3>
+<h3>&#8220;glmnet&#8221; Elastic Net</h3>
+<h3>&#8220;gbm&#8221; Gradient Boosting</h3>
+<h3>&#8220;nnet&#8221; Neural Network</h3>
+<h3>&#8220;RWeka&#8221;</h3>
+<h3>&#8220;rattle&#8221;</h3>
+          </section>
+        </div>
+        
+
+
+        <div id="speaker-note" class="invisible" style="display: none;"></div>
+        <aside id="help" class="sidebar invisible" style="display: none;">
+          <table>
+            <caption>Help</caption>
+            <tbody>
+              <tr>
+                <th>Move Around</th>
+                <td>&larr;&nbsp;&rarr;</td>
+              </tr>
+              <tr>
+                <th>Source File</th>
+                <td>s</td>
+              </tr>
+              <tr>
+                <th>Change Theme</th>
+                <td>t</td>
+              </tr>
+              <tr>
+                <th>Syntax Highlight</th>
+                <td>h</td>
+              </tr>
+              <tr>
+                <th>Speaker Notes</th>
+                <td>n</td>
+              </tr>
+              <tr>
+                <th>Toggle 3D</th>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th>Help</th>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </aside>
+
+    </div> <!-- slides -->
+    </div>
+    
+    <!--[if lt IE 9]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">
+    </script>
+    <script>CFInstall.check({ mode: "overlay" });</script>
+    <![endif]-->
+
+    <script src="src/prettify/prettify.js" onload="prettyPrint();" defer></script>
+    <script src="js/utils.js"></script>
+  </body>
+</html>

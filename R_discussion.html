@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="content-type" content="text/html;charset=utf-8"> 
+   <title>R Discussion</title>
+
+<meta name="generator" content="- generator not found -">
+<meta name="author"    content="- author not found -" >
+
+<!-- S6 style sheet links -->
+<link rel="stylesheet" href="R_discussion.css" media="projection" id="styleProjection">
+<link rel="stylesheet" href="s6/screen.css"         media="screen"     id="styleScreen">
+<link rel="stylesheet" href="s6/print.css"          media="print">
+
+<!-- S6 JS -->
+<script src="s6/jquery.js"></script>
+<script src="s6/jquery.slideshow.js"></script>
+<script>
+  $(document).ready( function() {
+    Slideshow.init();
+  } );
+
+  
+</script>
+
+<!-- Better Browser Banner for Microsoft Internet Explorer (IE) -->
+<!--[if IE]>
+<script src="s6/jquery.microsoft.js"></script>
+<![endif]-->
+
+
+
+</head>
+<body>
+
+<div class="layout"> 
+  <div id="header"></div>
+  <div id="footer">
+    <h1></h1>
+    <h2></h2>
+  </div>
+</div>
+
+<div class="presentation">
+   
+<div class='slide '>
+<h1>R you ready?</h1><h3>Flexbile</h3>
+<h3>Useful Packages</h3>
+<h3>64-bit</h3>
+<h3>Cloud computing</h3>
+
+</div>
+<div class='slide '>
+<h1>Command Line Options</h1><h3>R &#8212;vanilla</h3>
+<ul>
+	<li>&#8212;no-save, &#8212;no-restore</li>
+</ul>
+<h3>Rscript</h3>
+<h3>R &#8212;slave</h3>
+<h3>R CMD BATCH</h3>
+<ul>
+	<li>default: save, restore</li>
+</ul>
+<h3>commandArgs()</h3>
+
+</div>
+<div class='slide '>
+<h1>Efficiency</h1><h3>&#8220;&lt;-&#8221; versus &#8220;=&#8221;</h3>
+<h3>Use the optimized built-in functions</h3>
+<ul>
+	<li>.primitive(), .C(), .Call()</li>
+</ul>
+<h3>Avoid using rbind() in the loop</h3>
+<h3>Profiling</h3>
+<ul>
+	<li>Rprof &#8220;profr&#8221;</li>
+</ul>
+<ul>
+	<li>Rprofmem</li>
+</ul>
+
+</div>
+<div class='slide '>
+<h1>Interface to c/cpp/python</h1><h3>Compile .C() Function</h3>
+<ul>
+	<li>R CMD SHLIB</li>
+	<li>header file &#8220;R.h&#8221;</li>
+	<li>both inputs and ouput are passed by pointers</li>
+</ul>
+<h3>&#8220;Rcpp&#8221; and &#8220;inline&#8221;</h3>
+<ul>
+	<li>cfunction</li>
+	<li>cxxfunction</li>
+</ul>
+<h3>Interface to Python</h3>
+<ul>
+	<li>&#8220;RPy2&#8221;</li>
+</ul>
+
+</div>
+<div class='slide '>
+<h1>Interface to SAS/Excel/SQL</h1><h3>&#8220;sas7bdat&#8221;</h3>
+<ul>
+	<li>read.sas7bdat(&#8220;filename.sas7bdat&#8221;)</li>
+</ul>
+<h3>&#8220;xlsReadWrite&#8221;</h3>
+<ul>
+	<li>read.xls</li>
+	<li>write.xls</li>
+</ul>
+<h3>RExcel</h3>
+<h3>Interface to Databases</h3>
+<ul>
+	<li>&#8220;RMySQL&#8221;</li>
+</ul>
+<ul>
+	<li>&#8220;RSQLite&#8221;</li>
+</ul>
+<ul>
+	<li>&#8220;RPostgreSQL&#8221;</li>
+</ul>
+
+</div>
+<div class='slide '>
+<h1>Graphics Modules</h1><h3>&#8220;grahpics&#8221;</h3>
+<h3>&#8220;lattice&#8221;</h3>
+<h3>&#8220;ggplot&#8221;</h3>
+<h3>&#8220;googlevis&#8221;</h3>
+<h3>&#8220;animation&#8221;</h3>
+<h3>&#8220;manipulate&#8221; in RStudio</h3>
+
+</div>
+<div class='slide '>
+<h1>Modeling</h1><h3>&#8220;rpart&#8221; R version of CART</h3>
+<h3>&#8220;randomForest&#8221;</h3>
+<h3>&#8220;e1071&#8221; R version of libsvm</h3>
+<h3>&#8220;glmnet&#8221; Elastic Net</h3>
+<h3>&#8220;gbm&#8221; Gradient Boosting</h3>
+<h3>&#8220;nnet&#8221; Neural Network</h3>
+<h3>&#8220;RWeka&#8221;</h3>
+<h3>&#8220;rattle&#8221;</h3></div>
+
+
+</div><!-- presentation -->
+</body>
+</html>
